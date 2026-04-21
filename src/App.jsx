@@ -1,6 +1,7 @@
 import data from "./DATA/offers.js";
 import OfferList from "./Compenents/OfferList.jsx";
 import Header from "./Compenents/Header.jsx";
+import { useState } from "react";
 
 function App() {
   return (

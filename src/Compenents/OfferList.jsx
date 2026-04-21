@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import OfferDetails from "./OfferDetails";
 function OfferList(props) {
+  const [offer, setOffer] = useState({});
+  const [show, setShow] = useState(false);
 
   return (
     <div className="grid gap-2.5 md:grid-cols-2 lg:grid-cols-3">
@@ -13,12 +15,18 @@ function OfferList(props) {
           <h1 className="text-4xl ">{offer.bank}</h1>
           <p className="font-bold">Montant: {offer.amount} DH</p>
           <p className="text-blue-400">Taux dinteret: {offer.rate * 100} %</p>
-          <button className="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer w-40">
-            Details
+          <button
+            onClick={() => {
+              setOffer(offer);
+              setShow((show) => true);
+            }}
+            className="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer w-40"
+          >
+            Voir Details
           </button>
         </div>
       ))}
-      <OfferDetails />
+      {show && <OfferDetails offer={offer} setShow={setShow} />}
     </div>
   );
 }

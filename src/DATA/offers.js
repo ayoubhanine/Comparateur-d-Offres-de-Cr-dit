@@ -8,7 +8,7 @@ const data = [
     image: "/CIH.png",
     bank: "CIH BANK",
     amount: 200000,
-    rate: 0.035,
+    rate: 0.03,
     duration: 20,
     details: {
       Durée: 20,
@@ -23,8 +23,8 @@ const data = [
     rate: 0.025,
     duration: 20,
     details: {
-      Durée: 20,
-      Mensualité: 2000,
+      Durée: 25,
+      Mensualité: 7000,
     },
   },
   {
@@ -35,8 +35,8 @@ const data = [
     rate: 0.04,
     duration: 20,
     details: {
-      Durée: 20,
-      Mensualité: 2000,
+      Durée: 30,
+      Mensualité: 60000,
     },
   },
 ];
