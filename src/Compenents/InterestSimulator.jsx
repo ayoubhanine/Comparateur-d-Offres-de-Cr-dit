@@ -18,20 +18,21 @@ function simulateCapital(offer){
  function SimulateCapital({offer}){
     const Data=simulateCapital(offer)
     return(
-        <table border="1">
+        <table className="table-auto border-collapse border border-gray-400 mx-auto">
             <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Interet</th>
-                    <th>Total</th>
+                <tr className="bg-gray-200">
+                    <th  className="border border-gray-400 px-4 py-2">Year</th>
+                    <th  className="border border-gray-400 px-4 py-2">Interet</th>
+                    <th  className="border border-gray-400 px-4 py-2">Total</th>
                 </tr>
             </thead>
             <tbody>
                 {Data.map((ele)=>(
-                    <tr key={ele.year}>
-                        <td>{ele.year}</td>
-                        <td>{ele.interet}</td>
-                        <td>{ele.total}</td>
+                    <tr key={ele.year} 
+                    className="text-center">
+                        <td className="border border-gray-400 px-4 py-2">{ele.year}</td>
+                        <td className="border border-gray-400 px-4 py-2">{ele.interet}</td>
+                        <td className="border border-gray-400 px-4 py-2">{ele.total}</td>
                     </tr>
                 ))}
             </tbody>
