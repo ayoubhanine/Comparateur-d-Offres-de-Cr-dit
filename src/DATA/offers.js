@@ -11,7 +11,7 @@ const data = [
     rate: 0.03,
     duration: 20,
     details: {
-      Durée: 20,
+      Durée: 3,
       Mensualité: 2000,
     },
   },
@@ -32,7 +32,7 @@ const data = [
     image: "/BMCE.png",
     bank: "BMCE BANK",
     amount: 200000,
-    rate: 0.04,
+    rate: 0.05,
     duration: 20,
     details: {
       Durée: 30,
