@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function App() {
   return (
-    <div className="bg-slate-200 h-screen p-6">
+    <div className="bg-slate-200 h-screen p-6 overflow-auto">
       <Header />
       <OfferList offers={data} />
     </div>

@@ -9,7 +9,6 @@ const data = [
     bank: "CIH BANK",
     amount: 200000,
     rate: 0.03,
-    duration: 20,
     details: {
       Durée: 3,
       Mensualité: 2000,
@@ -21,7 +20,6 @@ const data = [
     bank: "CHAABI BANK",
     amount: 200000,
     rate: 0.025,
-    duration: 20,
     details: {
       Durée: 25,
       Mensualité: 7000,
@@ -31,11 +29,10 @@ const data = [
     id: 3,
     image: "/BMCE.png",
     bank: "BMCE BANK",
-    amount: 200000,
-    rate: 0.05,
-    duration: 20,
+    amount: 10000,
+    rate: 0.1,
     details: {
-      Durée: 30,
+      Durée: 4,
       Mensualité: 60000,
     },
   },
