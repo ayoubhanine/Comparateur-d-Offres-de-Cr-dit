@@ -15,9 +15,11 @@ function simulateCapital(offer){
     return results;
 }
 
- function SimulateCapital({offer}){
+ function SimulateCapital({offer}){    // destructuring de props
     const Data=simulateCapital(offer)
     return(
+        <div>
+            <h1 className="text-gray-900">l’évolution d’un capital sur plusieurs années</h1><br></br>
         <table className="table-auto border-collapse border border-gray-400 mx-auto">
             <thead>
                 <tr className="bg-gray-200">
@@ -36,7 +38,7 @@ function simulateCapital(offer){
                     </tr>
                 ))}
             </tbody>
-        </table>
+        </table></div>
     )
  }
  export default SimulateCapital;
