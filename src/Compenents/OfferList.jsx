@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import OfferDetails from "./OfferDetails";
 function OfferList(props) {
+  const [currentPage, setcurrentPage] = useState(1);
+
   const [offer, setOffer] = useState({});
   const [show, setShow] = useState(false);
   let recommended = props.offers[0];
@@ -31,6 +33,7 @@ function OfferList(props) {
             onClick={() => {
               setOffer(offer);
               setShow((show) => true);
+              setcurrentPage(1);
             }}
             className="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer w-40"
           >
@@ -38,7 +41,14 @@ function OfferList(props) {
           </button>
         </div>
       ))}
-      {show && <OfferDetails offer={offer} setShow={setShow} />}
+      {show && (
+        <OfferDetails
+          offer={offer}
+          setShow={setShow}
+          currentPage={currentPage}
+          setcurrentPage={setcurrentPage}
+        />
+      )}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useState } from "react";
 function simulateCapital(offer){
     let results=[];
     let currentCapital=offer.amount
@@ -15,8 +15,13 @@ function simulateCapital(offer){
     return results;
 }
 
- function SimulateCapital({offer}){    // destructuring de props
-    const Data=simulateCapital(offer)
+ function SimulateCapital({offer, currentPage, setcurrentPage}){  
+    const Data=simulateCapital(offer)  // destructuring de props
+    const rowPerPage=4
+    const limit=currentPage*rowPerPage
+    const indexFirst=limit-rowPerPage
+    const currentData=Data.slice(indexFirst,limit)
+  
     return(
         <div>
             <h1 className="text-gray-900">l’évolution d’un capital sur plusieurs années</h1><br></br>
@@ -29,7 +34,7 @@ function simulateCapital(offer){
                 </tr>
             </thead>
             <tbody>
-                {Data.map((ele)=>(
+                {currentData.map((ele)=>(
                     <tr key={ele.year} 
                     className="text-center">
                         <td className="border border-gray-400 px-4 py-2">{ele.year}</td>
@@ -38,7 +43,16 @@ function simulateCapital(offer){
                     </tr>
                 ))}
             </tbody>
-        </table></div>
+        </table>
+         <div className="flex items-center justify-center gap-4 mt-6"><button onClick={()=>setcurrentPage((p)=>p-1)}
+            disabled={currentPage===1}
+            className="bg-blue-500 text-white px-3 py-1 rounded disabled:opacity-50 ">prev</button>
+         <span className="text-gray-700 font-semibold">page:{currentPage}</span>
+         <button onClick={()=>setcurrentPage((p)=>p+1)}
+         disabled={limit>=Data.length}
+            className="bg-blue-500 text-white px-3 py-1 rounded disabled:opacity-50"> next
+            </button></div>
+            </div >
     )
  }
  export default SimulateCapital;
