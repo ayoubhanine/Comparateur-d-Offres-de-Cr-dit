@@ -15,8 +15,8 @@ function simulateCapital(offer){
     return results;
 }
 
- function SimulateCapital({offer, currentPage, setcurrentPage}){  
-    const Data=simulateCapital(offer)  // destructuring de props
+ function SimulateCapital({offer, currentPage, setcurrentPage}){  // destructuring de props
+    const Data=simulateCapital(offer)  
     const rowPerPage=4
     const limit=currentPage*rowPerPage
     const indexFirst=limit-rowPerPage
@@ -24,7 +24,7 @@ function simulateCapital(offer){
   
     return(
         <div>
-            <h1 className="text-gray-900">l’évolution d’un capital sur plusieurs années</h1><br></br>
+            <h1 className="text-gray-900 font-semibold">l’évolution d’un capital pour chaque année</h1><br></br>
         <table className="table-auto border-collapse border border-gray-400 mx-auto">
             <thead>
                 <tr className="bg-gray-200">
