@@ -1,7 +1,3 @@
-import CIH from "../../public/CIH.png";
-import CHAABI from "../../public/CHAABI.png";
-import BMCE from "../../public/BMCE.png";
-
 const data = [
   {
     id: 1,
